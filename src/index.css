@@ -134,3 +134,9 @@ body {
   width: 20px;
   height: 20px;
 }
+
+/* Hide pannellum loading box */
+.pnlm-load-box,
+.pnlm-lbox {
+  display: none !important;
+}

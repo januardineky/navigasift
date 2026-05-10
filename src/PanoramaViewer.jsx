@@ -478,6 +478,13 @@ function PanoramaViewer({ isOpen, startScene, navigationConfig, onClose, onNavig
   }, [navigationConfig])
 
   useEffect(() => {
+    Object.values(PANORAMA_SCENES).forEach((scene) => {
+      const img = new Image()
+      img.src = scene.panorama
+    })
+  }, [])
+
+  useEffect(() => {
     if (!isOpen || !viewerHostRef.current) {
       return
     }
@@ -492,7 +499,7 @@ function PanoramaViewer({ isOpen, startScene, navigationConfig, onClose, onNavig
       showControls: false,
       showZoomCtrl: false,
       showFullscreenCtrl: false,
-      sceneFadeDuration: 800,
+      sceneFadeDuration: 0,
       default: {
         firstScene: initialSceneId,
       },
