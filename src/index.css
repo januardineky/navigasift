@@ -115,3 +115,22 @@ body {
 .pnlm-hotspot-base.nav-line::after {
   content: none;
 }
+
+.pnlm-hotspot-base.nav-line.nav-final {
+  width: 42px;
+  height: 42px;
+  margin-left: -21px;
+  margin-top: -42px;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2310b981' d='M32 3c-12.15 0-22 9.85-22 22 0 15.16 19.23 33.69 21.42 35.75a1 1 0 0 0 1.36 0C34.77 58.69 54 40.16 54 25 54 12.85 44.15 3 32 3z'/%3E%3Ccircle cx='32' cy='25' r='8.5' fill='%23ffffff'/%3E%3Cellipse cx='32' cy='60' rx='14' ry='3.5' fill='rgba(16,185,129,0.35)'/%3E%3C/svg%3E")
+    center center / contain no-repeat;
+  filter: drop-shadow(0 4px 12px rgba(16,185,129,0.45));
+}
+
+.sidebar-icon {
+  width: 20px;
+  height: 20px;
+}

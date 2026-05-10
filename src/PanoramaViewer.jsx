@@ -6,228 +6,256 @@ import { getTurnInstruction, normalizeAngle } from './utils/navigationVector'
 const PANORAMA_SCENES = {
   'scene-a': {
     id: 'scene-a',
-    title: 'Area A',
     panorama: '/panoramas/lt1/lobi1.jpg',
     hotSpots: [
       {
-        pitch: 2.55,
-        yaw: -4.87,
+        pitch: -9.55,
+        yaw: -6.87,
         type: 'scene',
-        text: 'Ke Scene B',
         sceneId: 'scene-b',
         targetYaw: -79.39,
         targetPitch: -7.33,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
     ],
   },
   'scene-b': {
     id: 'scene-b',
-    title: 'Area B',
     panorama: '/panoramas/lt1/lobi2.jpg',
     hotSpots: [
       {
         pitch: -13.24,
         yaw: -82.68,
         type: 'scene',
-        text: 'Ke Scene A',
         sceneId: 'scene-a',
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
       {
         pitch: -18.29,
         yaw: 64.61,
         type: 'scene',
-        text: 'Ke Scene A',
         sceneId: 'scene-g',
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
       {
         pitch: -12.53,
         yaw: 1.00,
         type: 'scene',
-        text: 'Ke Scene A',
         sceneId: 'scene-h',
         targetYaw: -155.43,
         targetPitch: -0.18,
-        targetHfov: 110,
+        
+        cssClass: 'arrow',
+      },
+      {
+        pitch: -169.18,
+        yaw: 12.92,
+        type: 'scene',
+        sceneId: 'scene-i',
+        targetYaw: -155.43,
+        targetPitch: -0.18,
+        
         cssClass: 'arrow',
       },
     ],
   },
   'scene-c': {
     id: 'scene-c',
-    title: 'Lantai 2 - Area A',
     panorama: '/panoramas/lt2/lobi1.jpg',
     hotSpots: [
       {
         pitch: -9.00,
         yaw: -10.49,
         type: 'scene',
-        text: 'Ke Area F Lantai 2',
         sceneId: 'scene-f',
         targetYaw: -76.68,
         targetPitch: 1.23,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
       {
         pitch: -13.5,
         yaw: 157,
         type: 'scene',
-        text: 'Ke Area B Lantai 2',
         sceneId: 'scene-d',
         targetYaw: 170.76,
         targetPitch: -0.36,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
       {
         pitch: -21.99,
         yaw: 78.69,
         type: 'scene',
-        text: 'Ke Area C Lantai 2',
         sceneId: 'scene-h',
         targetYaw: -74.53,
         targetPitch: -2.94,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
     ],
   },
   'scene-d': {
     id: 'scene-d',
-    title: 'Lantai 2 - Area B',
     panorama: '/panoramas/lt2/lorongkiri1.jpg',
     hotSpots: [
       {
         pitch: -13.65,
         yaw: -11.10,
         type: 'scene',
-        text: 'Ke Area A Lantai 2',
         sceneId: 'scene-c',
         targetYaw: -12.41,
         targetPitch: -1.22,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
       {
         pitch: -13,
         yaw: 172,
         type: 'scene',
-        text: 'Ke Area C Lantai 2',
         sceneId: 'scene-e',
         targetYaw: 170.50,
         targetPitch: 0.13,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
     ],
   },
   'scene-e': {
     id: 'scene-e',
-    title: 'Lantai 2 - Area C',
     panorama: '/panoramas/lt2/lorongkiri2.jpg',
     hotSpots: [
       {
         pitch: -16.75,
         yaw: 8.12,
         type: 'scene',
-        text: 'Ke Area B Lantai 2',
         sceneId: 'scene-d',
         targetYaw: -12.35,
         targetPitch: -1.03,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
       {
         pitch: -25.02,
         yaw: 97.57,
         type: 'scene',
-        text: 'Ke Area A Lantai 2',
-        sceneId: 'scene-c',
+        sceneId: 'scene-j',
         targetYaw: 78.69,
         targetPitch: -21.99,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
     ],
   },
   'scene-f': {
     id: 'scene-f',
-    title: 'Lantai 2 - Area D',
     panorama: '/panoramas/lt2/lorongkanan1.jpg',
     hotSpots: [
       {
         pitch: -17.59,
         yaw: -76.27,
         type: 'scene',
-        text: 'Ke Area B Lantai 2',
         sceneId: 'scene-g',
         targetYaw: 82.95,
         targetPitch: 7.97,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
       {
         pitch: -12.51,
         yaw: 106.33,
         type: 'scene',
-        text: 'Ke Area A Lantai 2',
         sceneId: 'scene-c',
         targetYaw: 155.06,
         targetPitch: -1.98,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
     ],
   },
   'scene-g': {
     id: 'scene-g',
-    title: 'Lantai 1 - Area C',
     panorama: '/panoramas/lt1/lobi3.jpg',
     hotSpots: [
       {
         pitch: -17.12,
         yaw: 14.50,
         type: 'scene',
-        text: 'Ke Area B Lantai 2',
         sceneId: 'scene-b',
         targetYaw: -79.39,
         targetPitch: -7.33,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
     ],
   },
   'scene-h': {
     id: 'scene-h',
-    title: 'Lantai 1 - Area C',
     panorama: '/panoramas/lt1/lorongkiri1.jpg',
     hotSpots: [
       {
         pitch: -15.13,
         yaw: 23.78,
         type: 'scene',
-        text: 'Ke Area B Lantai 2',
         sceneId: 'scene-b',
         targetYaw: -170.60,
         targetPitch: -0.78,
-        targetHfov: 110,
+        
         cssClass: 'arrow',
       },
       {
         pitch: 11.94,
         yaw: 108.27,
         type: 'scene',
-        text: 'Ke Area A Lantai 2',
         sceneId: 'scene-c',
         targetYaw: -108.02,
         targetPitch: -1.78,
-        targetHfov: 110,
+        
+        cssClass: 'arrow',
+      },
+      {
+        pitch: -13.39,
+        yaw: -155.15,
+        type: 'scene',
+        sceneId: 'scene-j',
+        targetYaw: -108.02,
+        targetPitch: -1.78,
+        
+        cssClass: 'arrow',
+      },
+    ],
+  },
+  'scene-i': {
+    id: 'scene-i',
+    panorama: '/panoramas/lt1/lorongkanan1.jpg',
+    hotSpots: [
+      {
+        pitch: -15.13,
+        yaw: 23.78,
+        type: 'scene',
+        sceneId: 'scene-b',
+        targetYaw: -170.60,
+        targetPitch: -0.78,
+        
+        cssClass: 'arrow',
+      },
+    ],
+  },
+  'scene-j': {
+    id: 'scene-j',
+    panorama: '/panoramas/lt1/lorongkiri2.jpg',
+    hotSpots: [
+      {
+        pitch: -17.33,
+        yaw: -146.15,
+        type: 'scene',
+        sceneId: 'scene-h',
+        targetYaw: -170.60,
+        targetPitch: -0.78,
+        
         cssClass: 'arrow',
       },
     ],
@@ -235,18 +263,18 @@ const PANORAMA_SCENES = {
 }
 
 const ROOM_SCENE_BY_ID = {
-  'ft1-1a': 'scene-a',
-  'ft1-1b': 'scene-a',
+  'ft1-1a': 'scene-j',
+  'ft1-1b': 'scene-j',
   'ft1-1c': 'scene-h',
   'ft1-1d': 'scene-h',
-  'ft1-1e': 'scene-b',
-  'ft1-1f': 'scene-b',
+  'ft1-1e': 'scene-i',
+  'ft1-1f': 'scene-i',
   'ft1-1h': 'scene-h',
   'ft1-1i': 'scene-h',
-  'ft1-1j': 'scene-h',
-  'ft1-1k': 'scene-h',
-  'ft1-1l': 'scene-g',
-  'ft1-1m': 'scene-g',
+  'ft1-1j': 'scene-i',
+  'ft1-1k': 'scene-i',
+  'ft1-1l': 'scene-h',
+  'ft1-1m': 'scene-j',
   'ft1-2a': 'scene-d',
   'ft1-2b': 'scene-d',
   'ft1-2c': 'scene-c',
@@ -263,24 +291,24 @@ const ROOM_SCENE_BY_ID = {
 }
 
 const ROOM_TARGET_POINTS = {
-  'ft1-1a': { sceneId: 'scene-a', yaw: -24, pitch: -16 },
-  'ft1-1b': { sceneId: 'scene-a', yaw: -12, pitch: -15 },
+  'ft1-1a': { sceneId: 'scene-j', yaw: 49.48, pitch: -3.65 },
+  'ft1-1b': { sceneId: 'scene-j', yaw: -172.54, pitch: -4.84 },
   'ft1-1c': { sceneId: 'scene-h', yaw: -111.77, pitch: -4.96 },
   'ft1-1d': { sceneId: 'scene-h', yaw: -100.89, pitch: 9.20 },
-  'ft1-1e': { sceneId: 'scene-b', yaw: -150, pitch: -13 },
-  'ft1-1f': { sceneId: 'scene-b', yaw: -168, pitch: -13 },
+  'ft1-1e': { sceneId: 'scene-i', yaw: 53.51, pitch: -5.46 },
+  'ft1-1f': { sceneId: 'scene-i', yaw: -179.19, pitch: -2.28 },
   'ft1-1h': { sceneId: 'scene-h', yaw: 46, pitch: -13 },
   'ft1-1i': { sceneId: 'scene-h', yaw: 72, pitch: -14 },
-  'ft1-1j': { sceneId: 'scene-h', yaw: 90, pitch: -14 },
-  'ft1-1k': { sceneId: 'scene-h', yaw: 106, pitch: -13 },
-  'ft1-1l': { sceneId: 'scene-g', yaw: -16, pitch: -13 },
-  'ft1-1m': { sceneId: 'scene-g', yaw: -38, pitch: -13 },
+  'ft1-1j': { sceneId: 'scene-i', yaw: -102.73, pitch: -9.46 },
+  'ft1-1k': { sceneId: 'scene-i', yaw: -27.76, pitch: -7.29 },
+  'ft1-1l': { sceneId: 'scene-h', yaw: -175.70, pitch: 1.94 },
+  'ft1-1m': { sceneId: 'scene-j', yaw: 25.32, pitch: -2.31 },
   'ft1-2a': { sceneId: 'scene-d', yaw: -164.44, pitch: -5.92 },
   'ft1-2b': { sceneId: 'scene-d', yaw: -106.23, pitch: -14.04 },
   'ft1-2c': { sceneId: 'scene-c', yaw: -160.88, pitch:-6.78 },
   'ft1-2d': { sceneId: 'scene-c', yaw: -155.12, pitch: -23.05 },
   'ft1-2e': { sceneId: 'scene-c', yaw: -21.40, pitch: -3.75 },
-  'ft1-2f': { sceneId: 'scene-f', yaw: 116.34, pitch: -1.65 },
+  'ft1-2f': { sceneId: 'scene-f', yaw: 117.21, pitch: -3.02 },
   'ft1-2g': { sceneId: 'scene-f', yaw: -156.28, pitch: -9.21 },
   'ft1-2h': { sceneId: 'scene-h', yaw: 22, pitch: -14 },
   'ft1-2i': { sceneId: 'scene-h', yaw: 40, pitch: -14 },
@@ -334,6 +362,7 @@ const SCENE_TRANSITIONS = {
     { to: 'scene-a', yaw: -82.68, pitch: -13.24 },
     { to: 'scene-g', yaw: 64.61, pitch: -18.29 },
     { to: 'scene-h', yaw: 1.0, pitch: -12.53 },
+    { to: 'scene-i', yaw: 12.92, pitch: -169.18 },
   ],
   'scene-c': [
     { to: 'scene-f', yaw: -10.49, pitch: -9.0 },
@@ -356,6 +385,13 @@ const SCENE_TRANSITIONS = {
   'scene-h': [
     { to: 'scene-b', yaw: 23.78, pitch: -15.13 },
     { to: 'scene-c', yaw: 108.27, pitch: 11.94 },
+    { to: 'scene-j', yaw: -155.15, pitch: -13.39 },
+  ],
+  'scene-i': [
+    { to: 'scene-b', yaw: 23.78, pitch: -15.13 },
+  ],
+  'scene-j': [
+    { to: 'scene-h', yaw: -146.15, pitch: -17.33 },
   ],
 }
 
@@ -542,8 +578,8 @@ function PanoramaViewer({ isOpen, startScene, navigationConfig, onClose, onNavig
           type: 'info',
           pitch: target.pitch,
           yaw: target.yaw,
-          cssClass: 'nav-line',
-          text: 'Arah tujuan',
+          cssClass: target.isFinalRoom ? 'nav-line nav-final' : 'nav-line',
+          text: target.isFinalRoom ? 'Lokasi tujuan' : 'Arah tujuan',
           clickHandlerFunc: () => {
             const nextScene = target.nextSceneId
             if (nextScene !== currentScene) {

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+  <g fill="none" fill-rule="evenodd">
+    <path d="M8 8h40v40H8z" fill="#4c1d95"/>
+    <path d="M12 12v8h8v-8h-8zM12 22v8h8v-8h-8zM12 32v8h8v-8h-8z" fill="#fff"/>
+    <path d="M52 12L36 28V20L52 4z" fill="#4c1d95"/>
+  </g>
+</svg>

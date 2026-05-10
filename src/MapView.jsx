@@ -39,12 +39,18 @@ function MapView({ onSelectFT1, showFt1Plan, activeFloor }) {
       doubleClickZoom: false,
     })
 
+    const isMobile = window.innerWidth < 768
+    const fitBoundsOptions = {
+      padding: isMobile ? [12, 12] : [20, 20],
+      maxZoom: isMobile ? -1 : 0,
+    }
+
     if (showFt1Plan) {
       const planImage = activeFloor === 'floor2' ? '/denahlt2.jpeg' : '/denahlt1.jpeg'
       const floorLabel = activeFloor === 'floor2' ? 'FT1 - Lantai 2' : 'FT1 - Lantai 1'
 
       L.imageOverlay(planImage, FLOOR1_BOUNDS).addTo(map)
-      map.fitBounds(FLOOR1_BOUNDS, { padding: [20, 20] })
+      map.fitBounds(FLOOR1_BOUNDS, fitBoundsOptions)
 
       L.tooltip({
         permanent: true,
@@ -56,17 +62,17 @@ function MapView({ onSelectFT1, showFt1Plan, activeFloor }) {
         .addTo(map)
     } else {
       L.imageOverlay('/utama.jpeg', CAMPUS_BOUNDS).addTo(map)
-      map.fitBounds(CAMPUS_BOUNDS, { padding: [20, 20] })
+      map.fitBounds(CAMPUS_BOUNDS, fitBoundsOptions)
 
       // Use point markers instead of a polygon for building selection
       const BUILDING_POINTS = [
-        { id: 'dc', name: 'DC', coords: [682, 502], direction: 'left', offset: [-10, 0] },
-        { id: 'labtek1', name: 'Labtek 1', coords: [820.5, 781.5], direction: 'top', offset: [0, -14] },
+        // { id: 'dc', name: 'DC', coords: [682, 502], direction: 'left', offset: [-10, 0] },
+        // { id: 'labtek1', name: 'Labtek 1', coords: [820.5, 781.5], direction: 'top', offset: [0, -14] },
         { id: 'ft1', name: 'FT 1 Informatika', coords: [716, 964], direction: 'top', offset: [0, -14] },
-        { id: 'ft3', name: 'FT3 Teknik Sipil', coords: [659, 1106], direction: 'right', offset: [10, 0] },
-        { id: 'labtek2', name: 'Labtek 2', coords: [408, 552], direction: 'left', offset: [-10, 0] },
-        { id: 'ft2', name: 'FT2 Elektro', coords: [306, 724], direction: 'top', offset: [0, -14] },
-        { id: 'labtek3', name: 'Labtek 3', coords: [222, 890], direction: 'right', offset: [10, 0] },
+        // { id: 'ft3', name: 'FT3 Teknik Sipil', coords: [659, 1106], direction: 'right', offset: [10, 0] },
+        // { id: 'labtek2', name: 'Labtek 2', coords: [408, 552], direction: 'left', offset: [-10, 0] },
+        // { id: 'ft2', name: 'FT2 Elektro', coords: [306, 724], direction: 'top', offset: [0, -14] },
+        // { id: 'labtek3', name: 'Labtek 3', coords: [222, 890], direction: 'right', offset: [10, 0] },
       ]
 
       BUILDING_POINTS.forEach((b) => {
