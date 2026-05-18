@@ -10,6 +10,13 @@ export function normalizeAngle(degrees) {
   return value
 }
 
+export function vectorFromPoints(pointA, pointB) {
+  return {
+    x: pointB.x - pointA.x,
+    y: pointB.y - pointA.y,
+  }
+}
+
 export function vectorFromYaw(yawDegrees) {
   const radians = yawDegrees * DEG_TO_RAD
 
