@@ -69,6 +69,7 @@ function MapView({ onSelectFT1, showFt1Plan, activeFloor }) {
         // { id: 'dc', name: 'DC', coords: [682, 502], direction: 'left', offset: [-10, 0] },
         // { id: 'labtek1', name: 'Labtek 1', coords: [820.5, 781.5], direction: 'top', offset: [0, -14] },
         { id: 'ft1', name: 'FT 1 Informatika', coords: [716, 964], direction: 'top', offset: [0, -14] },
+        { id: 'parkir', name: 'Parkiran Fakultas', coords: [748, 330], direction: 'top', offset: [0, -14] },
         // { id: 'ft3', name: 'FT3 Teknik Sipil', coords: [659, 1106], direction: 'right', offset: [10, 0] },
         // { id: 'labtek2', name: 'Labtek 2', coords: [408, 552], direction: 'left', offset: [-10, 0] },
         // { id: 'ft2', name: 'FT2 Elektro', coords: [306, 724], direction: 'top', offset: [0, -14] },
@@ -76,6 +77,20 @@ function MapView({ onSelectFT1, showFt1Plan, activeFloor }) {
       ]
 
       BUILDING_POINTS.forEach((b) => {
+        if (b.id === 'parkir') {
+          L.tooltip({
+            permanent: true,
+            direction: b.direction,
+            offset: b.offset,
+            className: 'building-label',
+          })
+            .setLatLng(b.coords)
+            .setContent(b.name)
+            .addTo(map)
+
+          return
+        }
+
         const marker = L.circleMarker(b.coords, {
           radius: 8,
           color: '#4c1d95',

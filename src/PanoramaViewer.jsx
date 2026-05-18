@@ -154,16 +154,16 @@ const PANORAMA_SCENES = {
     id: 'scene-f',
     panorama: '/panoramas/lt2/lorongkanan1.jpg',
     hotSpots: [
-      {
-        pitch: -17.59,
-        yaw: -76.27,
-        type: 'scene',
-        sceneId: 'scene-g',
-        targetYaw: 82.95,
-        targetPitch: 7.97,
+      // {
+      //   pitch: -17.59,
+      //   yaw: -76.27,
+      //   type: 'scene',
+      //   sceneId: 'scene-g',
+      //   targetYaw: 82.95,
+      //   targetPitch: 7.97,
         
-        cssClass: 'arrow',
-      },
+      //   cssClass: 'arrow',
+      // },
       {
         pitch: -12.51,
         yaw: 106.33,
@@ -378,7 +378,7 @@ const SCENE_TRANSITIONS = {
     { to: 'scene-c', yaw: 97.57, pitch: -25.02 },
   ],
   'scene-f': [
-    { to: 'scene-g', yaw: -76.27, pitch: -17.59 },
+    // { to: 'scene-g', yaw: -76.27, pitch: -17.59 },
     { to: 'scene-c', yaw: 106.33, pitch: -12.51 },
   ],
   'scene-g': [{ to: 'scene-b', yaw: 14.5, pitch: -17.12 }],
